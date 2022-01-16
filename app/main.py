@@ -36,5 +36,5 @@ app.include_router(vote.router)
 async def root():
     return {
         "message": "Welcome to the battle star known as Galactica",
-        "version": "0.0.2",
+        "version": "0.0.3",
     }
