@@ -94,9 +94,10 @@ jobs:
       name: production
 
     steps:
+      - name: pullging git repository
+        uses: actions/checkout@v2
       - name: deploying to heroku
-      - uses: actions/checkout@v2
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP_NAME}}
